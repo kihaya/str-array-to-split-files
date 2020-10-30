@@ -21,8 +21,6 @@ def str_array_to_split_files(data=[], target_directory="") -> bool:
     for str_data in data:
         filename = str(uuid.uuid4())[:8]
         full_file_name = target_directory + "/" + filename + ext
-        f = open(full_file_name, "w")
-        f.write(str_data)
-        f.close()
+        with open(full_file_name, "w") as f: f.write(str_data)
 
     return True
