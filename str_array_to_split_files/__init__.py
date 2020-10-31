@@ -1,10 +1,10 @@
 #coding: utf-8
 
 import os
-import typing
+from typing import *
 import uuid
 
-def str_array_to_split_files(data=[], target_directory="") -> bool:
+def str_array_to_split_files(data: List[str]=[], target_directory:str="") -> bool:
     """
     Split string array to splitted files.
     """
